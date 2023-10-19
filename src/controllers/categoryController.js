@@ -38,6 +38,7 @@ categoryController.createCategory = (req, res) => {
     try {
         const createCategory = categoryModel.create(req.body)
         return res.json({
+            status: "OK",
             message: "Data berhasil Ditambahkan"
         })
     } catch (error) {
@@ -60,6 +61,7 @@ categoryController.updateCategory = (req, res) => {
                 throw err
             } else {
                 return res.json({
+                    status: "OK",
                     message: "Data Berhasil Diperbarui",
                 })
             }
@@ -78,6 +80,7 @@ categoryController.deleteCategory = (req, res) => {
                 throw err
             } else {
                 return res.json({
+                    status: "OK",
                     message: "Data Berhasil Dihapus"
                 })
             }
