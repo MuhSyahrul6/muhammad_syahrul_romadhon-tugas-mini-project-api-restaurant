@@ -39,6 +39,7 @@ menuController.createMenu = (req, res) => {
     try {
         const createMenu = menuModel.create(req.body)
         return res.json({
+            status: "OK",
             message: "Data berhasil Ditambahkan"
         })
     } catch (error) {
@@ -63,6 +64,7 @@ menuController.updateMenu = (req, res) => {
                 throw err
             } else {
                 return res.json({
+                    status: "OK",
                     message: "Data Berhasil Diperbarui",
                 })
             }
@@ -81,6 +83,7 @@ menuController.deleteMenu = (req, res) => {
                 throw err
             } else {
                 return res.json({
+                    status: "OK",
                     message: "Data Berhasil Dihapus"
                 })
             }
