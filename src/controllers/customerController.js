@@ -36,6 +36,7 @@ customerController.createCustomer = (req, res) => {
     try {
         const createCustomer = customerModel.create(req.body)
         return res.json({
+            status: "OK",
             message: "Data berhasil Ditambahkan"
         })
     } catch (error) {
@@ -61,6 +62,7 @@ customerController.updateCustomer = (req, res) => {
                 throw err
             } else {
                 return res.json({
+                    status: "OK",
                     message: "Data Berhasil Diperbarui",
                 })
             }
@@ -79,6 +81,7 @@ customerController.deleteCustomer = (req, res) => {
                 throw err
             } else {
                 return res.json({
+                    status: "OK",
                     message: "Data Berhasil Dihapus"
                 })
             }
